@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useState, type SubmitEvent } from "react";
 import type { CollageRequest, ListeningPeriod } from "./api";
 const periods: [ListeningPeriod, string][] = [
   ["7day", "Last 7 days"],
@@ -18,7 +18,7 @@ export function CollageForm({
   const [username, setUsername] = useState("");
   const [period, setPeriod] = useState<ListeningPeriod>("7day");
   const [size, setSize] = useState(5);
-  function submit(event: FormEvent<HTMLFormElement>) {
+  function submit(event: SubmitEvent<HTMLFormElement>) {
     event.preventDefault();
     onSubmit({ username: username.trim(), period, size });
   }
