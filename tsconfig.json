@@ -9,7 +9,8 @@
     "noEmit": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "types": ["node", "jest", "@testing-library/jest-dom"],
+    "noUncheckedSideEffectImports": true,
+    "types": ["vite/client", "node", "jest", "@testing-library/jest-dom"],
     "allowJs": true,
     "checkJs": true
   },
