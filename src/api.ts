@@ -52,7 +52,7 @@ export async function generateCollage(
     let response: Response;
     try {
       response = await Promise.race([
-        fetch(`/api/v1/generate?${query}`, { signal: controller.signal }),
+        fetch(`/v1/generate?${query}`, { signal: controller.signal }),
         interrupted,
       ]);
     } catch (error) {
