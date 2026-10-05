@@ -7,9 +7,8 @@ export default defineConfig(({ mode }) => {
     plugins: [react()],
     server: {
       proxy: {
-        "^/api/v1/generate(?:\\?|$)": {
+        "^/v1/generate(?:\\?|$)": {
           target: env.BACKEND_URL || "http://127.0.0.1:8080",
-          rewrite: (path) => path.replace(/^\/api\/v1\/generate/, "/generate"),
           timeout: 75000,
           proxyTimeout: 75000,
           configure: (proxy) => {

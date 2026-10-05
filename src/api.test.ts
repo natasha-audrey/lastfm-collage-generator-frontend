@@ -13,7 +13,7 @@ test("encodes the trimmed username and chosen listening period and grid size", a
     ),
   ).resolves.toBe(png);
   expect(fetchMock.mock.calls[0][0]).toBe(
-    "/api/v1/generate?user=a+%26+b&timeframe=1month&size=3",
+    "/v1/generate?user=a+%26+b&timeframe=1month&size=3",
   );
 });
 

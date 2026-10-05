@@ -25,8 +25,8 @@ go build
 ```
 
 The backend defaults to `http://127.0.0.1:8080`. The frontend requests
-`/api/v1/generate`; Vite proxies only that exact route to the backend's
-`/generate`, preserving query parameters. To use a different local backend:
+`/v1/generate`; Vite proxies only that exact route to the backend,
+preserving the path and query parameters. To use a different local backend:
 
 ```sh
 BACKEND_URL=http://127.0.0.1:9090 pnpm dev

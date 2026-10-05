@@ -63,7 +63,7 @@ test("edits do not generate; Enter submits once, disabling controls and announci
   fireEvent.submit(screen.getByRole("form"));
   expect(fetch).toHaveBeenCalledTimes(1);
   expect(jest.mocked(fetch).mock.calls[0][0]).toBe(
-    "/api/v1/generate?user=user+%26+name&timeframe=overall&size=10",
+    "/v1/generate?user=user+%26+name&timeframe=overall&size=10",
   );
   await loadCandidate(0);
   expect(screen.getByRole("img")).toHaveAttribute("src", "blob:collage-1");
